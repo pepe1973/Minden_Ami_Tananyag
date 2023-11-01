@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Share+Tech+Mono&family=Tilt+Neon&display=swap');
+* {
+    color: blue;
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Share Tech Mono', monospace; */
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+#tarto {
+    background-color: whitesmoke;
+    color: blue;
+    margin: auto;
+    padding: 1em;
+    width: 50%;
+}
+
+h4 {
+    color: green;
+    text-decoration: underline;
+}
+
+.kiemel {
+    color: red;
+    font-weight: bold;
+}
+
+.kod {
+    color: limegreen;
+}
+
+.link {
+    background-color: blue;
+    color: white;
+}
+
+ol li {
+    border: 1px solid blue;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    text-align: justify;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ul li {
+    border: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+table {
+    border-spacing: 5px;
+    margin-bottom: 1em;
+}
+
+th {
+    color: tomato;
+}
+
+th,
+td {
+    border: 1px solid blue;
+    padding: 2px;
+}
+
+@media screen and (max-width: 1200px) {
+    #tarto {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        align-items: start;
+    }
+
+    #tarto {
+        width: 95%;
+    }
+
+    table {
+        max-width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <base target="_blank" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../stilus/stilus.css" />
+        <link
+            rel="shortcut icon"
+            href="../images/logo.png"
+            type="image/x-icon"
+        />
+        <title>HTML bevezetés</title>
+    </head>
+    <body>
+        <div id="tarto">
+            <h1><a href="./index.html" target="_self">HTML - Bevezetés</a></h1>
+            <ol>
+                <h4>Alapvető dolgok:</h4>
+                <li>Tim Berners-Lee találta fel 1991-ben.</li>
+                <li>
+                    A HTML a
+                    <span class="kiemel"
+                        >HiperSzöveg JelölőNyelv (HyperText Markup
+                        Language)</span
+                    >
+                    rövidítése.
+                </li>
+                <li>
+                    <span class="kiemel">HiperSzöveg (HyperText)</span>: sima
+                    szöveg más erőforrásokra mutató hivatkozásokkal (<span
+                        class="kiemel"
+                        >link</span
+                    >).
+                </li>
+                <li>
+                    <span class="kiemel">JelölőNyelv (Markup Language)</span>: a
+                    tartalom részeit elemekbe (<span class="kiemel"
+                        >element</span
+                    >), címkék (<span class="kiemel">tag</span>) közé
+                    csomagolja. Ezek az elemek mondják meg a böngészőnek hogyan
+                    jelenítse meg a weboldalt, azaz a HTML leírja egy weboldal
+                    tartalmának a struktúráját.
+                </li>
+                <h4>HTML dokumentum alap felépítése:</h4>
+                <li>Egy egyszerű HTML dokumentum szerkezete.</li>
+                <img src="./images/kep_01.png" />
+                <li>
+                    <span class="kiemel">&lt;!DOCTYPE html&gt;</span>: az oldal
+                    a HTML5 szabványt követi.
+                </li>
+                <li>
+                    <span class="kiemel">&lt;html&gt;&lt;/html&gt;</span>: az
+                    oldal gyökéreleme. Ez tartalmazza "leszármazottként" a többi
+                    elemet.
+                </li>
+                <li>
+                    <span class="kiemel">&lt;head&gt;&lt;/head&gt;</span>: a
+                    "meta-elemeket" tartalmazó elem. Ezeknek az elemeknek a
+                    tartalma segíti a böngészőt a tartalom helyes
+                    megjelenítésében.
+                </li>
+                <li>
+                    <span class="kiemel">&lt;body&gt;&lt;/body&gt;</span>: ebben
+                    az elemben soroljuk fel a weboldal létrehozásához szükséges
+                    elemeket. Ezek tartalma adja meg az oldal szerkezetét.
+                </li>
+                <li>
+                    <span class="kiemel">&lt;title&gt;&lt;/title&gt;</span>: a
+                    weboldal címe. Ez jelenik meg az oldal fülén (<span
+                        class="kiemel"
+                        >tab</span
+                    >), a böngésző címsorában (<span class="kiemel"
+                        >title bar</span
+                    >),illetve ezen a néven kerül elmentésre a böngésző
+                    könyvjelzői közé.
+                </li>
+                <li>Egy HTML oldal képi megjelenítése.</li>
+                <img src="./images/kep_02.png" />
+                <h4>HTML elem felépítése, megjelenítése:</h4>
+                <li>
+                    <span class="kiemel">elem (element)</span>: a HTML
+                    dokumentumok fő építőeleme. Három részből áll: nyitó címke
+                    (<span class="kiemel">opening tag</span>), tartalom (<span
+                        class="kiemel"
+                        >content</span
+                    >) és záró címke (<span class="kiemel">closing tag</span>).
+                    A tartalom rész fog megjelenni a böngészőben. MINDIG TEGYÜK
+                    KI A ZÁRÓCÍMKÉT!
+                </li>
+                <li>
+                    A HTML nem követeli meg a kisbetűs címkeneveket, de nagyon
+                    javasolt, mert például az XHTML viszont igen.
+                </li>
+                <img src="./images/kep_03.png" />
+                <li>
+                    Az elemek egymásba ágyazhatóak. Lásd első kép. Vigyázni kell
+                    a címkék helyes lezárási sorrendjére!
+                </li>
+                <li id="ures">
+                    <span class="kiemel"
+                        >üres elem (empty element, void element)</span
+                    >: ebben az esetben csak nyitó címke van (itt zárom le az
+                    elemet, de nem kötelező:
+                    <span class="kod">&lt;tagname /&gt;</span>). Nincs tartalom
+                    és záró címke! Pillanatnyilag ezek az üres elemek.
+                </li>
+                <img src="./images/kep_04.png" />
+                <h4>Elemek megjelenítési érétke:</h4>
+                <li>
+                    Majdnem minden HTML elemnek van egy megjelenítési értéke.
+                    Amit bármikor megtudunk változtatni.
+                </li>
+                <li id="blokk">
+                    <span class="kiemel">blokkszintű elem (block element)</span
+                    >:
+                    <ul>
+                        <li>A blokkszintű elem mindig új sort kezd.</li>
+                        <li>
+                            A böngésző automatikusan tesz egy kis margót az elem
+                            elé és mögé.
+                        </li>
+                        <li>
+                            Mindig lefoglalja a rendelkezésre álló sort az
+                            elejétől a végéig.
+                        </li>
+                    </ul>
+                </li>
+                <img src="./images/kep_05.png" />
+                <li>
+                    Blokkszintű elemek a HTML-ben. Legtöbbet használt:
+                    <a href=""><span class="link">div</span></a>
+                </li>
+                <img src="./images/kep_06.png" />
+                <img src="./images/kep_07.png" />
+                <li id="inline">
+                    <span class="kiemel">beágyazott elem (inline element)</span
+                    >:
+                    <ul>
+                        <li>Egy beágyazott elem soha nem kezd új sort.</li>
+                        <li>Annyi helyet foglal, amennyire szüksége van.</li>
+                        <li>
+                            Egy beágyazott elem nem tartalmazhat egy blokkszintű
+                            elemet!
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Beágyazott elemek a HTML-ben. Legtöbbet használt:
+                    <a href=""><span class="link">span</span></a>
+                </li>
+                <img src="./images/kep_08.png" />
+                <img src="./images/kep_09.png" />
+                <h4>Attribútumok:</h4>
+                <li>
+                    <span class="kiemel"
+                        >Attribútum , tulajdonság (attribute)</span
+                    >:
+                    <ul>
+                        <li>Minden HTML elemnek lehetnek.</li>
+                        <li>Ráadás információk a HTML elemekről.</li>
+                        <li>Mindig az elem nyitó címkéjében találhatóak.</li>
+                        <li>
+                            Rendszerint név="érték" (<span class="kiemel"
+                                >name="value"</span
+                            >) formában írjuk őket.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    A HTML nem követeli meg a kisbetűs attribútumokat, de nagyon
+                    javasolt, mert például az XHTML viszont igen.
+                </li>
+                <img src="./images/kep_12.png" />
+                <li>
+                    Sokszor használt attribútumok:
+                    <ul>
+                        <li>
+                            <span class="kiemel">id</span>: egy meghatározott
+                            elem kijelölésére.
+                        </li>
+                        <li>
+                            <span class="kiemel">class</span>: valamilyen
+                            szempontból összetartozó elemek kijelölésére.
+                        </li>
+                        <li>
+                            <span class="kiemel">href</span>: (hypertext
+                            reference) a külső erőforrás URL címe vagy elérési
+                            útja (<span class="kiemel">file path</span>).
+                        </li>
+                        <li>
+                            <span class="kiemel">src</span>: (source) egy kép,
+                            vagy szkript állomány URL címe vagy elérési útja
+                            (<span class="kiemel">file path</span>).
+                        </li>
+                        <li>
+                            <span class="kiemel">alt</span>: (alternate text)
+                            alternatív szöveg, ha a kép valami miatt nem jelenik
+                            meg.
+                        </li>
+                        <li>
+                            <span class="kiemel">width</span>: a fénykép
+                            szélessége pixelben megadva.
+                        </li>
+                        <li>
+                            <span class="kiemel">height</span>: a fénykép
+                            magassága pixelben megadva.
+                        </li>
+                        <li>
+                            <span class="kiemel">style</span>: beágyazott
+                            stílushoz (<span class="kiemel">inline style</span
+                            >).
+                        </li>
+                        <li>
+                            <span class="kiemel">title</span>: kis felugró
+                            ablakban (<span class="kiemel">pop-up</span>)
+                            megjelenő kiegészítő, rövid magyarázó szöveg, ha az
+                            elemre húzzuk az egeret.
+                        </li>
+                        <li>
+                            <span class="kiemel">lang</span>: az oldal nyelvének
+                            a meghatározása: nyelv + (ország) (<span class="kod"
+                                >lang="en-US"</span
+                            >).
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    A HTML nem követeli meg az attribútumokat idézőjelek közé
+                    tegyük, de nagyon javasolt, mert például az XHTML viszont
+                    igen.
+                </li>
+                <li>
+                    Néha mind az idézőjel, mind az aposztróf használata
+                    kötelező!
+                    <ul>
+                        <li>
+                            <span class="kod"
+                                >title="A nevem: 'The Mighty Man'"</span
+                            >
+                            vagy
+                        </li>
+                        <li>
+                            <span class="kod"
+                                >title='A nevem: "The Mighty Man"'</span
+                            >
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Ha az attribútum értéke több szóból áll, lásd
+                    <span class="kiemel">title</span>, akkor KÖTELEZŐ az
+                    idézőjel.
+                    <ul>
+                        <li>
+                            <span class="kod">title=Ez egy felirat</span>
+                            helytelen!
+                        </li>
+                        <li>
+                            <span class="kod">title="Ez egy felirat"</span>
+                            helyes!
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="kiemel"
+                        >Logikai attribútum (boolean attribute)</span
+                    >: főleg az űrlapok esetében vannak attribútumok, melyek
+                    értéke igaz vagy hamis. Ekkor elegendő csak az attribútum
+                    nevét kiírni.
+                    <ul>
+                        <li>
+                            <span class="kod"
+                                >&lt;input type="text" required="required"
+                                /&gt;</span
+                            >
+                            helyett
+                        </li>
+                        <li>
+                            <span class="kod"
+                                >&lt;input type="text" required /&gt;</span
+                            >
+                        </li>
+                    </ul>
+                    Pillanatnyilag ezek a
+                    <a
+                        href="https://meiert.com/en/blog/boolean-attributes-of-html/"
+                        ><span class="link">logikai attribútum</span></a
+                    >-ok.
+                </li>
+                <img src="./images/kep_13.png" />
+                <h4>Kommentek:</h4>
+                <li>
+                    <ul>
+                        <li>
+                            HTML-ben a komment jelölésére a
+                            <span class="kiemel">&lt;!-- --&gt;</span> címkepár
+                            szolgál.
+                        </li>
+                        <li>Lehet egysoros vagy többsoros.</li>
+                        <li>
+                            Figyelmeztetéseket és emlékeztetőket helyezhetünk el
+                            a kódban.
+                        </li>
+                        <li>
+                            Bárhol elhelyezhető. Sor elején, sor végén vagy akár
+                            soron belül is.
+                        </li>
+                    </ul>
+                </li>
+                <img src="./images/kep_58.png" />
+                <li>
+                    Kommentálás segítségével kódsorokat alakíthatunk kommentté.
+                    Ekkor a böngésző figyelmen kívül hagyja azokat, így egyfajta
+                    hibakeresést is tudunk végezni.
+                </li>
+                <h4>Források:</h4>
+                <p>
+                    <a href="https://www.w3schools.com/html/default.asp"
+                        ><span class="link">w3schools/html</span></a
+                    >
+                </p>
+                <p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                        ><span class="link">mdn/html</span></a
+                    >
+                </p>
+            </ol>
+        </div>
+    </body>
+</html>

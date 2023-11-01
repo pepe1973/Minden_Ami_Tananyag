@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <base target="_blank" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../stilus/stilus.css" />
+        <link
+            rel="shortcut icon"
+            href="../images/logo.png"
+            type="image/x-icon"
+        />
+        <title>CSS bevezetés</title>
+    </head>
+    <body>
+        <div id="tarto">
+            <h1><a href="./index.html" target="_self">CSS - Bevezetés</a></h1>
+            <ol>
+                <h4>Alapvető dolgok:</h4>
+                <li>
+                    A CSS a
+                    <span class="kiemel"
+                        >Lépcsőzetes StílusLapok (Cascading Style Sheets)</span
+                    >
+                    rövidítése.
+                </li>
+                <li>
+                    <span class="kiemel">Lépcsőzetes (Cascading)</span>:
+                    <ul>
+                        <li>
+                            A "leszármazott" elemek megöröklik az "ősök"
+                            stílusát.
+                        </li>
+                        <li>
+                            Egy elemre explicit módon megadott stílusok közül az
+                            érvényesül, amelyik a "legközelebb" van hozzá a
+                            kódban.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="kiemel">StílusLapok (Style Sheets)</span>:
+                    <ul>
+                        <li>
+                            Böngészőbeli Alapértelmezett Stílus (<span
+                                class="kiemel"
+                                >Default Style</span
+                            >) - Nem explicit módon megadott!
+                        </li>
+                        <li>
+                            Beágyazott Stílus (<span class="kiemel"
+                                >Inline Style</span
+                            >) - Explicit módon megadott!
+                        </li>
+                        <li>
+                            Belső Stíluslap (<span class="kiemel"
+                                >Internal Stylesheet</span
+                            >) - Explicit módon megadott!
+                        </li>
+                        <li>
+                            Külső Stíluslap (<span class="kiemel"
+                                >External Stylesheet</span
+                            >) - Explicit módon megadott!
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    A CSS mondja meg a böngészőnek, hogyan jelenjen meg a
+                    weboldal. Egy stíluslappal több oldalnak is leírhatjuk a
+                    megjelenését!
+                </li>
+                <li>
+                    <span class="kiemel"
+                        >Külső stíluslap (external stylesheet)</span
+                    >:
+                    <ul>
+                        <li>
+                            Egy <span class="kiemel">.css</span> kiterjesztésű
+                            állományban lévő CSS kódok összesége.
+                        </li>
+                        <li>
+                            Erre az állományra a
+                            <span class="kiemel">head</span> elemen belül lévő
+                            <span class="kiemel">&lt;link /&gt;</span>
+                            elemben hivatkozhatunk.
+                        </li>
+                        <li>
+                            Egy állománnyal egy teljes weblap (<span
+                                class="kiemel"
+                                >website</span
+                            >) stílusát megtudom határozni, ami több weboldalból
+                            (<span class="kiemel">webpage</span>) áll.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="kiemel"
+                        >Belső stíluslap (internal stylesheet)</span
+                    >: a <span class="kiemel">head</span> elemen belül lévő
+                    <span class="kiemel">&lt;style&gt;&lt;/style&gt;</span>
+                    elemben található CSS kódok összesége.
+                </li>
+                <li>
+                    <span class="kiemel">Beágyazott stílus (inline style)</span
+                    >: egy meghatározott HTML elem
+                    <span class="kiemel">style</span> attribútumában lévő CSS
+                    kódok összesége.
+                </li>
+                <img src="./images/kep_01.png" />
+                <img src="./images/kep_02.png" />
+                <li>
+                    A fenti képeken a következők látszanak.
+                    <ul>
+                        <li>
+                            Külső stíluslap :
+                            <span class="kiemel">stilus.css</span>
+                        </li>
+                        <li>Az erre való hivatkozás: 8.sor</li>
+                        <li>Belső stíluslap: 9-15.sor</li>
+                        <li>
+                            Beágyazott stílus a
+                            <span class="kiemel">p</span>-elemen 20.sor.
+                        </li>
+                        <li>
+                            És ez, amelyik a "legközelebb" van hozzá, tehát ez
+                            hat rá!
+                        </li>
+                        <li>
+                            Böngészőbeli alapértelmezett stílus a
+                            <span class="kiemel">h1</span> elemen
+                        </li>
+                    </ul>
+                </li>
+                <h4>Stíluslapok sorrendje:</h4>
+                <li>
+                    A lépcsőzetesség másik leírása esetén megnézzük melyik
+                    stíluslap van "legközelebb" az elemhez. Ha van
+                    <span class="kiemel">beágyazott stílus</span>, akkor ő a
+                    nyerő. De mi a helyzet a másik kettő sorrendjével. Nézzünk
+                    két példát.
+                </li>
+                <li>
+                    Az elsőben a <span class="kiemel">külső stíluslap</span> van
+                    közelebb a <span class="kiemel">h1</span> elemhez, 12. sor.
+                </li>
+                <img src="./images/kep_08.png" />
+                <img src="./images/kep_09.png" />
+                <li>
+                    A másodikban a
+                    <span class="kiemel">belső stíluslap</span> van közelebb a
+                    <span class="kiemel">h1</span> elemhez, 7-12. sor.
+                </li>
+                <img src="./images/kep_10.png" />
+                <img src="./images/kep_11.png" />
+                <h4>Szintaxis:</h4>
+                <li>A CSS szabályok szintaxisa a következő.</li>
+                <img src="./images/kep_03.png" />
+                <li>
+                    Tehát egy kijelölőből, szelektorból (<span class="kiemel"
+                        >selector</span
+                    >) és egy deklarációs blokkból (<span class="kiemel"
+                        >declaration block</span
+                    >) áll.
+                </li>
+                <li>
+                    A kijelölő, szelektor (<span class="kiemel">selector</span>)
+                    rámutat arra a HTML elemre, melynek szeretne stílust adni.
+                </li>
+                <li>
+                    A deklarációk (<span class="kiemel">declaration</span>)
+                    "tulajdonság : érték" párok (<span class="kiemel"
+                        >property : value</span
+                    >) pontosvesszővel lezárva. A tulajdonságok CSS
+                    tulajdonságok, az értékek CSS értékek. Ezeket vesszük körbe
+                    egy kapcsos zárójel párral.
+                </li>
+                <h4>Kommentek:</h4>
+                <li>
+                    <ul>
+                        <li>
+                            CSS-ben a komment jelölésére a
+                            <span class="kiemel">/*...*/</span> címkepár
+                            szolgál.
+                        </li>
+                        <li>Lehet egysoros vagy többsoros.</li>
+                        <li>
+                            Figyelmeztetéseket és emlékeztetőket helyezhetünk el
+                            a kódban.
+                        </li>
+                        <li>
+                            Bárhol elhelyezhető. Sor elején, sor végén vagy akár
+                            soron belül is. Utóbbi esetén vigyázzunk, hogy
+                            szavakat ne szakítsunk meg vele!
+                        </li>
+                    </ul>
+                </li>
+                <img src="./images/kep_12.png" />
+                <li>
+                    Kommentálás segítségével kódsorokat alakíthatunk kommentté.
+                    Ekkor a böngésző figyelmen kívül hagyja azokat, így egyfajta
+                    hibakeresést is tudunk végezni.
+                </li>
+                <h4>Források:</h4>
+                <p>
+                    <a href="https://www.w3schools.com/css/default.asp"
+                        ><span class="link">w3schools/css</span></a
+                    >
+                </p>
+                <p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                        ><span class="link">mdn/css</span></a
+                    >
+                </p>
+            </ol>
+        </div>
+    </body>
+</html>

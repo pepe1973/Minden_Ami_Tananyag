@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <base target="_blank" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../stilus/stilus.css" />
+        <link
+            rel="shortcut icon"
+            href="../images/logo.png"
+            type="image/x-icon"
+        />
+        <title>CSS szelektorok</title>
+    </head>
+    <body>
+        <div id="tarto">
+            <h1><a href="./index.html" target="_self">CSS - Szelektorok</a></h1>
+            <ol>
+                <h4>Alapvető dolgok:</h4>
+                <li>
+                    A CSS szelektor (<span class="kiemel">selector</span>)
+                    kiválasztja azt a HTML elemet (azokat a HTML elemeket)
+                    amelynek (amelyeknek) stílust szeretnénk adni.
+                </li>
+                <li>
+                    Öt kategóriába sorolhatjuk a szelektorokat.
+                    <ul>
+                        <li>
+                            Egyszerű szelektor (<span class="kiemel"
+                                >Simple Selector</span
+                            >) - elemnév, id vagy class alapján keres.
+                        </li>
+                        <li>
+                            Összetett szelektor (<span class="kiemel"
+                                >Combinator Selector</span
+                            >) - egymáshoz való viszonyuk alapján ("rokoni"
+                            viszony) keres.
+                        </li>
+                        <li>
+                            Ál-osztály szelektor (<span class="kiemel"
+                                >Pseudo-class Selector</span
+                            >) - egy elem állapota alapján keres.
+                        </li>
+                        <li>
+                            Ál-elem szelektor (<span class="kiemel"
+                                >Pseudo-element Selector</span
+                            >) - egy elem egy speciális, meghatározott része
+                            alapján keres.
+                        </li>
+                        <li>
+                            Tulajdonság szelektor (<span class="kiemel"
+                                >Attribute Selector</span
+                            >) - HTML tulajdonság, attribútum (<span
+                                class="kiemel"
+                                >attribute</span
+                            >) alapján keres.
+                        </li>
+                    </ul>
+                </li>
+                <h4>Egyszerű szelektorok:</h4>
+                <img src="./images/kep_04.png" />
+                <img src="./images/kep_05.png" />
+                <li>
+                    <span class="kiemel"
+                        >* - univerzális kijelölő (universal selector)</span
+                    >: minden HTML elem megkapja az adott stílust.
+                </li>
+                <li>
+                    <span class="kiemel">Elem kijelölő (element selector)</span
+                    >: ekkor az összes, adott HTML elem megkapja az adott
+                    stílust.
+                </li>
+                <li>
+                    <span class="kiemel">id kijelölő (id selector)</span>:
+                    <ul>
+                        <li>
+                            Ekkor egyetlen, egyedi
+                            <span class="kiemel">id="sarga"</span> attribútummal
+                            kijelölt elemnek adunk stílust.
+                        </li>
+                        <li>
+                            A CSS hivatkozásnál a
+                            <span class="kiemel">#sarga</span> jelölést
+                            használjuk.
+                        </li>
+                        <li>
+                            Egy HTML elemre csak egy
+                            <span class="kiemel">id</span> attribútum
+                            használható!
+                        </li>
+                        <li>Nem kezdődhet számmal!</li>
+                        <li>
+                            Nem lehet benne fehér szóköz (<span class="kiemel"
+                                >whitespace</span
+                            >) karakter!
+                        </li>
+                        <li>
+                            Kis- és nagybetű érzékeny!
+                            <span class="kiemel"
+                                >id="sarga" &ne; id="Sarga"</span
+                            >
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="kiemel">osztály kijelölő (class selector)</span
+                    >:
+                    <ul>
+                        <li>
+                            Ekkor EGY vagy TÖBB, egyedi
+                            <span class="kiemel">class="kozepre"</span>
+                            attribútummal kijelölt elemnek adunk stílust.
+                        </li>
+                        <li>
+                            A CSS hivatkozásnál a
+                            <span class="kiemel">.kozepre</span> jelölést
+                            használjuk.
+                        </li>
+                        <li>Nem kezdődhet számmal!</li>
+                        <li>
+                            Nem lehet benne fehér szóköz (<span class="kiemel"
+                                >whitespace</span
+                            >) karakter!
+                        </li>
+                        <li>
+                            Kis- és nagybetű érzékeny!
+                            <span class="kiemel"
+                                >class="kozepre" &ne; class="Kozepre"</span
+                            >
+                        </li>
+                        <li>
+                            Külön HTML elemre is állíthatunk be osztály
+                            kijelölőt. Például a
+                            <span class="kiemel">h1.kozepre</span> kijelölővel
+                            csak a <span class="kiemel">h1</span> elemeket
+                            zárjuk középre.
+                        </li>
+                        <li>
+                            Egy HTML elemre több
+                            <span class="kiemel">class</span> attribútum is
+                            használható! Ebben az esetben szóközzel elválasztva
+                            soroljuk fel őket.
+                            <span class="kiemel">class="kozepre zold"</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="kiemel"
+                        >Csoportosító kijelölő (grouping selector)</span
+                    >: több HTML elemre is rárakhatjuk ugyanazt a stílust, ekkor
+                    az elemeket vesszővel elválasztva soroljuk fel a
+                    szelektorban.
+                    <span class="kiemel">p, h1 { color: red; }</span>
+                </li>
+                <img src="./images/kep_06.png" />
+                <img src="./images/kep_07.png" />
+                <h4>Források:</h4>
+                <p>
+                    <a href="https://www.w3schools.com/css/default.asp"
+                        ><span class="link">w3schools/css</span></a
+                    >
+                </p>
+                <p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                        ><span class="link">mdn/css</span></a
+                    >
+                </p>
+            </ol>
+        </div>
+    </body>
+</html>
