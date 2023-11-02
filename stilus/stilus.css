@@ -10,6 +10,14 @@ body {
     background-color: black;
 }
 
+.material-symbols-outlined {
+    color: white;
+    font-size: 2em;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+}
+
 #tarto {
     background-color: whitesmoke;
     color: blue;
@@ -85,6 +93,14 @@ td {
 @media screen and (max-width: 800px) {
     body {
         align-items: start;
+    }
+
+    .material-symbols-outlined {
+        color: red;
+        font-size: 2em;
+        position: fixed;
+        bottom: 1em;
+        right: 1em;
     }
 
     #tarto {
