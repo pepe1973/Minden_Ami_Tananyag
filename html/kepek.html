@@ -215,17 +215,29 @@
                             <span class="kiemel">source</span> elemek a
                             képekhez. A kép forrása a
                             <span class="kiemel">srcset</span> attribútumban
-                            kerül beáálításra.
+                            kerül beállításra. Nincs megjelenítési értéke!
                         </li>
                         <li>
                             <span class="kiemel">img</span> elem kötelezően az
                             utolsó elemként, mert különben nem jeleneníti meg.
-                            Erre az elemre kell beállítani a stílust, hogy a
-                            többire hatni tudjon.
+                            Emlékezzünk, hogy ez a képek tartóeleme, amely az
+                            értékét az <span class="kiemel">srcset</span> vagy
+                            az <span class="kiemel">src</span> attribútumok
+                            értékéből veszi. Erre az elemre kell beállítani a
+                            stílust, hogy a többire hatni tudjon.
+                            <p>
+                                <span class="kod">source {width: 100px; }</span>
+                                - nem működik, helyette
+                            </p>
+                            <p>
+                                <span class="kod">img {width: 100px; }</span> -
+                                már működik
+                            </p>
                         </li>
                     </ul>
                 </li>
                 <img src="./images/kep_75.png" />
+                <img src="./images/kep_76.png" />
                 <li>
                     Látható, hogy a minimális szélesség (<span class="kiemel"
                         >min-width</span
