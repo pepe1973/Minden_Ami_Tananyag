@@ -21,10 +21,12 @@
             <span class="material-symbols-outlined"> arrow_circle_up </span>
         </a>
         <div id="tarto">
-            <h1><a href="./index.html" target="_self">HTML - Bevezetés</a></h1>
+            <h1>
+                <a href="./index.html" target="_self">HTML - Bevezetés</a>
+            </h1>
             <ol>
                 <h4>Alapvető dolgok:</h4>
-                <li>Tim Berners-Lee találta fel 1991-ben.</li>
+                <li>Tim Berners-Lee és csapata találta fel 1991-ben.</li>
                 <li>
                     A HTML a
                     <span class="kiemel"
@@ -86,7 +88,7 @@
                 <img src="./images/kep_02.png" />
                 <h4>HTML elem felépítése, megjelenítése:</h4>
                 <li>
-                    <span class="kiemel">elem (element)</span>: a HTML
+                    <span class="kiemel">Elem (element)</span>: a HTML
                     dokumentumok fő építőeleme. Három részből áll: nyitó címke
                     (<span class="kiemel">opening tag</span>), tartalom (<span
                         class="kiemel"
@@ -106,7 +108,7 @@
                 </li>
                 <li id="ures">
                     <span class="kiemel"
-                        >üres elem (empty element, void element)</span
+                        >Üres elem (empty element, void element)</span
                     >: ebben az esetben csak nyitó címke van (itt zárom le az
                     elemet, de nem kötelező:
                     <span class="kiemel">&lt;tagname /&gt;</span>). Nincs
@@ -116,10 +118,10 @@
                 <h4>Elemek megjelenítési értéke:</h4>
                 <li>
                     Majdnem minden HTML elemnek van egy megjelenítési értéke.
-                    Amit bármikor megtudunk változtatni.
+                    Amit bármikor meg tudunk változtatni.
                 </li>
                 <li id="blokk">
-                    <span class="kiemel">blokkszintű elem (block element)</span
+                    <span class="kiemel">Blokkszintű elem (block element)</span
                     >:
                     <ul>
                         <li>A blokkszintű elem mindig új sort kezd.</li>
@@ -141,7 +143,7 @@
                 <img src="./images/kep_06.png" />
                 <img src="./images/kep_07.png" />
                 <li id="inline">
-                    <span class="kiemel">beágyazott elem (inline element)</span
+                    <span class="kiemel">Beágyazott elem (inline element)</span
                     >:
                     <ul>
                         <li>Egy beágyazott elem soha nem kezd új sort.</li>
@@ -191,17 +193,18 @@
                             szempontból összetartozó elemek kijelölésére.
                         </li>
                         <li>
-                            <span class="kiemel">href</span>: (hypertext
-                            reference) a külső erőforrás URL címe vagy elérési
-                            útja (<span class="kiemel">file path</span>).
+                            <span class="kiemel"
+                                >href (hypertext reference)</span
+                            >: a külső erőforrás URL címe vagy elérési útja
+                            (<span class="kiemel">file path</span>).
                         </li>
                         <li>
-                            <span class="kiemel">src</span>: (source) egy kép,
+                            <span class="kiemel">src (source)</span>: egy kép,
                             vagy szkript állomány URL címe vagy elérési útja
                             (<span class="kiemel">file path</span>).
                         </li>
                         <li>
-                            <span class="kiemel">alt</span>: (alternate text)
+                            <span class="kiemel">alt (alternate text)</span>:
                             alternatív szöveg, ha a kép valami miatt nem jelenik
                             meg.
                         </li>
@@ -226,7 +229,7 @@
                         </li>
                         <li>
                             <span class="kiemel">lang</span>: az oldal nyelvének
-                            a meghatározása: nyelv + (ország) (<span class="kod"
+                            a meghatározása: nyelv (+ ország) (<span class="kod"
                                 >lang="en-US"</span
                             >).
                         </li>
@@ -272,13 +275,18 @@
                 <li>
                     <span class="kiemel"
                         >Logikai attribútum (boolean attribute)</span
-                    >: főleg az űrlapok esetében vannak attribútumok, melyek
-                    értéke igaz vagy hamis. Ekkor elegendő csak az attribútum
-                    nevét kiírni.
+                    >: főleg az űrlapok esetében vannak olyan attribútumok,
+                    melyek értéke igaz vagy hamis. Ha igaz, akkor elegendő csak
+                    az attribútum nevét kiírni.
                     <ul>
                         <li>
                             <span class="kod"
                                 >&lt;input type="text" required="required"
+                                /&gt;</span
+                            >
+                            vagy <br /><br />
+                            <span class="kod"
+                                >&lt;input type="text" required="true"
                                 /&gt;</span
                             >
                             helyett
@@ -301,8 +309,8 @@
                     <ul>
                         <li>
                             HTML-ben a komment jelölésére a
-                            <span class="kiemel">&lt;!-- --&gt;</span> címkepár
-                            szolgál.
+                            <span class="kiemel">&lt;!-- &nbsp; --&gt;</span>
+                            címkepár szolgál.
                         </li>
                         <li>Lehet egysoros vagy többsoros.</li>
                         <li>
@@ -321,6 +329,18 @@
                     Ekkor a böngésző figyelmen kívül hagyja azokat, így egyfajta
                     hibakeresést is tudunk végezni.
                 </li>
+                <h4>Kérdések:</h4>
+                <p>
+                    <a href="./tasks/kerdesek.html" target="_self"
+                        ><span class="kerdes">Kérdezz-felelek</span></a
+                    >
+                </p>
+                <h4>Feladatok:</h4>
+                <p>
+                    <a href="./tasks/feladatok.html" target="_self"
+                        ><span class="kerdes">Példa feladatok</span></a
+                    >
+                </p>
                 <h4>Források:</h4>
                 <p>
                     <a href="https://www.w3schools.com/html/default.asp"

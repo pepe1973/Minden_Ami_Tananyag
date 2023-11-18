@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Share+Tech+Mono&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
     color: blue;
     /* font-family: 'Roboto', sans-serif; */
     /* font-family: 'Share Tech Mono', monospace; */
+    /* font-family: 'Poppins', sans-serif; */
     font-family: 'Tilt Neon', sans-serif;
 }
 
@@ -43,6 +46,21 @@ h4 {
 .link {
     background-color: blue;
     color: white;
+}
+
+.kerdes {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.megoldas {
+    color: forestgreen;
+    display: none;
+    padding: 0.5em;
+}
+
+.feladat_megoldas {
+    color: forestgreen;
 }
 
 ol li {
