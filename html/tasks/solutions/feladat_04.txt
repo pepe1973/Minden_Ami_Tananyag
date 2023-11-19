@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base href="./mindenkulsoforrasittvan/" target="_blank" />
+        <link
+            rel="shortcut icon"
+            href="./images/jokep.png"
+            type="image/x-icon"
+        />
+        <title>HTML head elem</title>
+    </head>
+    <body></body>
+</html>

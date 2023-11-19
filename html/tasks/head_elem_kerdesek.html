@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <base target="_blank" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+        <link rel="stylesheet" href="../../stilus/stilus.css" />
+        <style>
+            li li {
+                border: none;
+                color: red;
+            }
+
+            .rejt {
+                display: none;
+            }
+
+            img {
+                display: block;
+                margin: 1em 0px;
+                width: 300px;
+            }
+        </style>
+        <link
+            rel="shortcut icon"
+            href="../../images/logo.png"
+            type="image/x-icon"
+        />
+        <title>HTML &lt;head&gt; elem - kérdések</title>
+    </head>
+    <body>
+        <a href="#tarto" target="_self">
+            <span class="material-symbols-outlined"> arrow_circle_up </span>
+        </a>
+        <div id="tarto">
+            <h1>
+                <a href="../head_elem.html" target="_self"
+                    >HTML - &lt;head&gt; elem - Kérdések</a
+                >
+            </h1>
+            <ol>
+                <h4>Kérdések:</h4>
+                <li>
+                    Melyik HTML elemnek a leszármazottja és melyiknek a testvére
+                    a &lt;head&gt; elem?
+                    <img src="./kep_01.jpg" alt="kép" />
+                    <ol>
+                        <li>&lt;html&gt; és &lt;title&gt;</li>
+                        <li>&lt;html&gt; és &lt;body&gt;</li>
+                        <li>&lt;body&gt; és &lt;html&gt;</li>
+                        <li>Nincsenek ilyen elemek.</li>
+                    </ol>
+                    <div class="megoldas">&lt;html&gt; és &lt;body&gt;</div>
+                    <button onclick="megmutat(event)" class="mutat">
+                        Megoldás
+                    </button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
+                </li>
+                <li>
+                    Melyik nem metaadato(ka)t tartalmazó elem?
+                    <img src="./kep_01.jpg" alt="kép" />
+                    <ol>
+                        <li>meta</li>
+                        <li>base</li>
+                        <li>href</li>
+                        <li>style</li>
+                        <li>link</li>
+                        <li>script</li>
+                        <li>title</li>
+                    </ol>
+                    <div class="megoldas">href</div>
+                    <button onclick="megmutat(event)" class="mutat">
+                        Megoldás
+                    </button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
+                </li>
+                <li>
+                    Hol nem jelenik meg alapból a &lt;title&gt; elem tartalma?
+                    <img src="./kep_01.jpg" alt="kép" />
+                    <ol>
+                        <li>A weboldal fülén.</li>
+                        <li>A böngésző címsorában.</li>
+                        <li>A böngészőbeli előzményekben.</li>
+                        <li>A böngésző könyvjelzői között.</li>
+                    </ol>
+                    <div class="megoldas">A böngésző könyvjelzői között.</div>
+                    <button onclick="megmutat(event)" class="mutat">
+                        Megoldás
+                    </button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
+                </li>
+                <li>
+                    Melyik elemet használjuk a belső stíluslapok tárolására?
+                    <img src="./kep_01.jpg" alt="kép" />
+                    <ol>
+                        <li>&lt;style&gt;&lt;/style&gt;</li>
+                        <li>&lt;link /&gt;</li>
+                        <li>&lt;script&gt;&lt;/script&gt;</li>
+                        <li>&lt;meta /&gt;</li>
+                    </ol>
+                    <div class="megoldas">&lt;style&gt;&lt;/style&gt;</div>
+                    <button onclick="megmutat(event)" class="mutat">
+                        Megoldás
+                    </button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
+                </li>
+                <li>
+                    Melyik elemet használjuk a külső stíluslapok tárolására?
+                    <img src="./kep_01.jpg" alt="kép" />
+                    <ol>
+                        <li>&lt;style&gt;&lt;/style&gt;</li>
+                        <li>&lt;link /&gt;</li>
+                        <li>&lt;script&gt;&lt;/script&gt;</li>
+                        <li>&lt;meta /&gt;</li>
+                    </ol>
+                    <div class="megoldas">&lt;link /&gt;</div>
+                    <button onclick="megmutat(event)" class="mutat">
+                        Megoldás
+                    </button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
+                </li>
+                <li>
+                    Melyik nem egy meta elem name="..." tartalma?
+                    <img src="./kep_01.jpg" alt="kép" />
+                    <ol>
+                        <li>keywords</li>
+                        <li>author</li>
+                        <li>cookie</li>
+                        <li>description</li>
+                        <li>viewport</li>
+                        <li>revised</li>
+                    </ol>
+                    <div class="megoldas">cookie</div>
+                    <button onclick="megmutat(event)" class="mutat">
+                        Megoldás
+                    </button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
+                </li>
+            </ol>
+        </div>
+        <script>
+            let megoldasok = document.getElementsByClassName('megoldas');
+            let megoldasokTomb = Array.from(megoldasok);
+            let mutat = document.getElementsByClassName('mutat');
+            let mutatTomb = Array.from(mutat);
+            let rejt = document.getElementsByClassName('rejt');
+            let rejtTomb = Array.from(rejt);
+            let gombok = document.getElementsByTagName('button');
+            let gombokTomb = Array.from(gombok);
+
+            function megmutat(e) {
+                let index = +gombokTomb.indexOf(e.target);
+                for (let i = 0; i < megoldasok.length; i++) {
+                    if (index / 2 === i) {
+                        megoldasok[i].style.display = 'block';
+                        mutat[i].style.display = 'none';
+                        rejt[i].style.display = 'block';
+                    }
+                }
+            }
+
+            function elrejt(e) {
+                let index = +gombokTomb.indexOf(e.target) - 1;
+                for (let i = 0; i < megoldasok.length; i++) {
+                    if (index / 2 === i) {
+                        megoldasok[i].style.display = 'none';
+                        mutat[i].style.display = 'block';
+                        rejt[i].style.display = 'none';
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

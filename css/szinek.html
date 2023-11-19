@@ -41,7 +41,7 @@
                 </li>
                 <li>
                     <span class="kiemel">Szín névvel (color name)</span>: a
-                    wegprogramozásban 140 előredefiniált szín létezik:
+                    webprogramozásban 140 előredefiniált szín létezik:
                     <a
                         href="https://www.w3schools.com/colors/colors_names.asp"
                         class="link"
@@ -51,7 +51,8 @@
                 <li>
                     <span class="kiemel">RGB színnel</span>: ebben az esetben a
                     jelölés:
-                    <p><span class="kod">color=rgb(r, g, b);</span></p>
+                    <p><span class="kod">color=rgb(r, g, b);</span> vagy</p>
+                    <p><span class="kod">color=rgb(r g b);</span></p>
                     ahol az <span class="kiemel">r (red)</span>,
                     <span class="kiemel">g (green)</span>,
                     <span class="kiemel">b (blue)</span> értékek a [0, 255]
@@ -60,12 +61,17 @@
                 <li>
                     A szürke árnyalai előállíthatók, ha a három értéket
                     egyenlőnek vesszük. Például.
-                    <p><span class="kod">color=rgb(150, 150, 150);</span></p>
+                    <p>
+                        <span class="kod">color=rgb(150, 150, 150);</span> vagy
+                    </p>
+                    <p><span class="kod">color=rgb(150 150 150);</span></p>
                 </li>
                 <li>
                     <span class="kiemel">RGBA színnel</span>: ebben az esetben a
                     jelölés:
-                    <p><span class="kod">color=rgba(r, g, b, a);</span></p>
+                    <p><span class="kod">color=rgba(r, g, b, a);</span> vagy</p>
+                    <p><span class="kod">color=rgb(r g b / a);</span> vagy</p>
+                    <p><span class="kod">color=rgba(r g b / a);</span></p>
                     ahol az <span class="kiemel">r (red)</span>,
                     <span class="kiemel">g (green)</span>,
                     <span class="kiemel">b (blue)</span> értékek a [0, 255]
@@ -74,7 +80,9 @@
                         >a (alfa csatorna - alpha channel)</span
                     >
                     a [0, 1] intervallumból. Minél kisebb az
-                    <span class="kiemel">a</span> értéke, annál áttetszőbb.
+                    <span class="kiemel">a</span> értéke, annál áttetszőbb. Az
+                    <span class="kiemel">a</span> értékét meg lehet adni
+                    százalékos formában (50%) is.
                 </li>
                 <img src="./images/kep_13.png" />
                 <img src="./images/kep_14.png" />
@@ -103,6 +111,15 @@
                     <span class="kiemel">g (green)</span>,
                     <span class="kiemel">b (blue)</span> értékek a [0, f]
                     intervallumból veszik az értéket.
+                </li>
+                <li>
+                    HEX színek esetén is használhatjuk az áttetszőséget. Ekkor:
+                    <p><span class="kod">color=#rrggbbaa;</span></p>
+                    ahol az
+                    <span class="kiemel"
+                        >aa (alfa csatorna - alpha channel)</span
+                    >
+                    érték is a [00, ff] intervallumból veszi az értékét.
                 </li>
                 <img src="./images/kep_15.png" />
                 <img src="./images/kep_16.png" />

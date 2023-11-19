@@ -54,10 +54,10 @@
                         <li>HyperText Mark Language</li>
                     </ol>
                     <div class="megoldas">HyperText Markup Language</div>
-                    <button onclick="megmutat(1)" class="mutat">
+                    <button onclick="megmutat(event)" class="mutat">
                         Megoldás
                     </button>
-                    <button onclick="elrejt(1)" class="rejt">Elrejt</button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
                 </li>
                 <li>
                     Mit jelent az, hogy hiperszöveg?
@@ -80,10 +80,10 @@
                     <div class="megoldas">
                         Sima szöveg más erőforrásokra mutató hivatkozásokkal.
                     </div>
-                    <button onclick="megmutat(2)" class="mutat">
+                    <button onclick="megmutat(event)" class="mutat">
                         Megoldás
                     </button>
-                    <button onclick="elrejt(2)" class="rejt">Elrejt</button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
                 </li>
                 <li>
                     Mit jelent az, hogy jelölőnyelv?
@@ -114,10 +114,10 @@
                         >), címkék (<span class="kiemel">tag</span>) közé
                         csomagolja.
                     </div>
-                    <button onclick="megmutat(3)" class="mutat">
+                    <button onclick="megmutat(event)" class="mutat">
                         Megoldás
                     </button>
-                    <button onclick="elrejt(3)" class="rejt">Elrejt</button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
                 </li>
                 <li>
                     Hogyan jelöljük, ha az oldal a HTML5 kódolást használja?
@@ -129,10 +129,10 @@
                         <li>Nincs külön jelölés.</li>
                     </ol>
                     <div class="megoldas">&lt;!DOCTYPE html&gt;</div>
-                    <button onclick="megmutat(4)" class="mutat">
+                    <button onclick="megmutat(event)" class="mutat">
                         Megoldás
                     </button>
-                    <button onclick="elrejt(4)" class="rejt">Elrejt</button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
                 </li>
                 <li>
                     Melyik nem kötelezően megadandó elem?
@@ -145,10 +145,10 @@
                         <li>&lt;body&gt;&lt;/body&gt;</li>
                     </ol>
                     <div class="megoldas">&lt;style&gt;&lt;/style&gt;</div>
-                    <button onclick="megmutat(5)" class="mutat">
+                    <button onclick="megmutat(event)" class="mutat">
                         Megoldás
                     </button>
-                    <button onclick="elrejt(5)" class="rejt">Elrejt</button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
                 </li>
                 <li>
                     Minden elemnek van nyitó- és zárócímkéje.
@@ -158,10 +158,10 @@
                         <li>Hamis</li>
                     </ol>
                     <div class="megoldas">Hamis</div>
-                    <button onclick="megmutat(6)" class="mutat">
+                    <button onclick="megmutat(event)" class="mutat">
                         Megoldás
                     </button>
-                    <button onclick="elrejt(6)" class="rejt">Elrejt</button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
                 </li>
                 <li>
                     Mi igaz az üres elemre?
@@ -172,10 +172,26 @@
                         <li>Van tartalma.</li>
                     </ol>
                     <div class="megoldas">Van nyitócímkéje.</div>
-                    <button onclick="megmutat(7)" class="mutat">
+                    <button onclick="megmutat(event)" class="mutat">
                         Megoldás
                     </button>
-                    <button onclick="elrejt(7)" class="rejt">Elrejt</button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
+                </li>
+                <li>
+                    Melyik nem üres elem?
+                    <img src="./kep_01.jpg" alt="kép" />
+                    <ol>
+                        <li>&lt;hr /&gt;</li>
+                        <li>&lt;br /&gt;</li>
+                        <li>&lt;a /&gt;</li>
+                        <li>&lt;img /&gt;</li>
+                        <li>&lt;meta /&gt;</li>
+                    </ol>
+                    <div class="megoldas">&lt;a /&gt;</div>
+                    <button onclick="megmutat(event)" class="mutat">
+                        Megoldás
+                    </button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
                 </li>
                 <li>
                     Mi nem igaz egy blokkszintű elemre?
@@ -196,10 +212,10 @@
                         Csak annyi helyet foglal el, amennyi szükséges, többet
                         nem.
                     </div>
-                    <button onclick="megmutat(8)" class="mutat">
+                    <button onclick="megmutat(event)" class="mutat">
                         Megoldás
                     </button>
-                    <button onclick="elrejt(8)" class="rejt">Elrejt</button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
                 </li>
                 <li>
                     Mi nem igaz egy beágyazott elemre?
@@ -217,32 +233,95 @@
                         <li>Általában van tartalma.</li>
                     </ol>
                     <div class="megoldas">Mindig új sort kezd.</div>
-                    <button onclick="megmutat(9)" class="mutat">
+                    <button onclick="megmutat(event)" class="mutat">
                         Megoldás
                     </button>
-                    <button onclick="elrejt(9)" class="rejt">Elrejt</button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
+                </li>
+                <li>
+                    Melyik állítás nem igaz az attribútumokra?
+                    <img src="./kep_01.jpg" alt="kép" />
+                    <ol>
+                        <li>Mindig az elem záró címkéjében találhatóak.</li>
+                        <li>
+                            Rendszerint név="érték" (<span class="kiemel"
+                                >name="value"</span
+                            >) formában írjuk őket.
+                        </li>
+                        <li>Vannak logikai attribútumok is.</li>
+                        <li>Minden HTML elemnek lehetnek.</li>
+                    </ol>
+                    <div class="megoldas">
+                        Mindig az elem záró címkéjében találhatóak.
+                    </div>
+                    <button onclick="megmutat(event)" class="mutat">
+                        Megoldás
+                    </button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
+                </li>
+                <li>
+                    Melyik nem létező attribútum?
+                    <img src="./kep_01.jpg" alt="kép" />
+                    <ol>
+                        <li>width</li>
+                        <li>height</li>
+                        <li>alt</li>
+                        <li>length</li>
+                        <li>src</li>
+                        <li>title</li>
+                    </ol>
+                    <div class="megoldas">length</div>
+                    <button onclick="megmutat(event)" class="mutat">
+                        Megoldás
+                    </button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
+                </li>
+                <li>
+                    Hogyan jelöljük a HTML-ben a kommentet?
+                    <img src="./kep_01.jpg" alt="kép" />
+                    <ol>
+                        <li>/* */</li>
+                        <li>&lt;-- --&gt;</li>
+                        <li>&lt;-- --!&gt;</li>
+                        <li>&lt;!-- --!&gt;</li>
+                        <li>&lt;!-- --&gt;</li>
+                        <li>&lt;--! --&gt;</li>
+                        <li>*/ /*</li>
+                    </ol>
+                    <div class="megoldas">&lt;!-- --&gt;</div>
+                    <button onclick="megmutat(event)" class="mutat">
+                        Megoldás
+                    </button>
+                    <button onclick="elrejt(event)" class="rejt">Elrejt</button>
                 </li>
             </ol>
         </div>
         <script>
-            let mutatok = document.getElementsByClassName('megoldas');
+            let megoldasok = document.getElementsByClassName('megoldas');
+            let megoldasokTomb = Array.from(megoldasok);
             let mutat = document.getElementsByClassName('mutat');
+            let mutatTomb = Array.from(mutat);
             let rejt = document.getElementsByClassName('rejt');
+            let rejtTomb = Array.from(rejt);
+            let gombok = document.getElementsByTagName('button');
+            let gombokTomb = Array.from(gombok);
 
-            function megmutat(szam) {
-                for (let i = 0; i < mutatok.length; i++) {
-                    if (szam === i + 1) {
-                        mutatok[i].style.display = 'block';
+            function megmutat(e) {
+                let index = +gombokTomb.indexOf(e.target);
+                for (let i = 0; i < megoldasok.length; i++) {
+                    if (index / 2 === i) {
+                        megoldasok[i].style.display = 'block';
                         mutat[i].style.display = 'none';
                         rejt[i].style.display = 'block';
                     }
                 }
             }
 
-            function elrejt(szam) {
-                for (let i = 0; i < mutatok.length; i++) {
-                    if (szam === i + 1) {
-                        mutatok[i].style.display = 'none';
+            function elrejt(e) {
+                let index = +gombokTomb.indexOf(e.target) - 1;
+                for (let i = 0; i < megoldasok.length; i++) {
+                    if (index / 2 === i) {
+                        megoldasok[i].style.display = 'none';
                         mutat[i].style.display = 'block';
                         rejt[i].style.display = 'none';
                     }

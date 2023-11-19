@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <base target="_blank" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+        <link rel="stylesheet" href="../stilus/stilus.css" />
+        <link
+            rel="shortcut icon"
+            href="../images/logo.png"
+            type="image/x-icon"
+        />
+        <title>Git és GitHub bevezetés</title>
+    </head>
+    <body>
+        <a href="#tarto" target="_self">
+            <span class="material-symbols-outlined"> arrow_circle_up </span>
+        </a>
+        <div id="tarto">
+            <h1>
+                <a href="./index.html" target="_self"
+                    >Git és GitHub - Bevezetés</a
+                >
+            </h1>
+            <ol>
+                <h4>Alapvető dolgok:</h4>
+                <li>
+                    <span class="kiemel">Verzió (version)</span>: egy régebbi
+                    állapota egy állománynak vagy állományrendszernek.
+                </li>
+                <li>
+                    <span class="kiemel"
+                        >Verziókezelő Rendszer (Version Control System -
+                        VCS)</span
+                    >: egy olyan rendszer, amely rögzíti egy állományban vagy
+                    egy állományrendszerben adott idő alatt bekövetkező
+                    változásokat, lehetőséget biztosítva, hogy egy későbbi
+                    időpontban előhívhatóak, összehasonlíthatóak legyenek.
+                    <ul>
+                        <li>
+                            Látható ki, mikor, mit csinált a különböző
+                            verziókban.
+                        </li>
+                        <li>Jellemzően szoftverfejlesztéskor használjuk.</li>
+                        <li>
+                            De alkalmas lehet képek, webfejlesztések
+                            változásainak folyamatos rögzítésére is.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Legegyszerűbb verziókövetés, ha saját magunk mindig
+                    létrehozunk egy új (időbélyegzővel ellátott) mappát és abba
+                    átmásoljuk az állományokat, majd módosítjuk azokat.
+                    <p>
+                        Ez a módszer nagyon sok hibalehetőséget hordoz magában.
+                        Jó mappában dolgozunk?
+                    </p>
+                </li>
+                <li>
+                    <span class="kiemel"
+                        >Lokális Verziókezelő Rendszer (Local Version Control
+                        System - LVCS)</span
+                    >: ebben az esetben a saját gépünkön van egy lokális
+                    adatbázis, amelyben eltároljuk a változtatásokat.
+                    <ul>
+                        <li>
+                            Mindig egy, a gépre mentett helyi másolattal (<span
+                                class="kiemel"
+                                >checkout</span
+                            >).
+                        </li>
+                        <li>
+                            A változtatásokat
+                            <a
+                                href="https://hu.wikipedia.org/wiki/Patch"
+                                class="link"
+                                >javítócsomagokban</a
+                            >
+                            (<span class="kiemel">patch</span>) tárolja. Ezek
+                            összefűzésével tudja visszaállítani a rendszert.
+                        </li>
+                    </ul>
+                    <p>
+                        Egy példa LVCS-re:
+                        <a href="https://www.gnu.org/software/rcs/" class="link"
+                            >RCS</a
+                        >.
+                    </p>
+                </li>
+                <img src="./images/kep_01.png" />
+                <img src="./images/kep_02.png" />
+                <li>
+                    <span class="kiemel"
+                        >Központosított Verziókezelő Rendszer (Centralized
+                        Version Control System - CVCS)</span
+                    >: ebben az esetben egy központi gépen tároljuk el az
+                    adatbázist a különböző verziókkal, amelyhez bármely
+                    felhasználó hozzáférhet.
+                    <ul>
+                        <li>
+                            Részben rálátásunk van arra, amit a többiek
+                            csinálnak.
+                        </li>
+                        <li>
+                            Központi felügyelet könnyen megvalósítható. Ki mit
+                            csinálhat.
+                        </li>
+                        <li>
+                            Legfőbb hibaforrás, hogy ha bármi történik a
+                            központi géppel, akkor minden elveszhet.
+                        </li>
+                    </ul>
+                    <p>
+                        Példák CVSC-re:
+                        <a
+                            href="https://savannah.nongnu.org/projects/cvs"
+                            class="link"
+                            >CVS</a
+                        >,
+                        <a href="https://www.perforce.com/" class="link"
+                            >Perforce</a
+                        >,
+                        <a href="https://subversion.apache.org/" class="link"
+                            >Subversion</a
+                        >
+                    </p>
+                </li>
+                <img src="./images/kep_03.png" />
+                <img src="./images/kep_04.png" />
+                <li>
+                    <span class="kiemel"
+                        >Elosztott Verziókezelő Rendszer (Distributed Version
+                        Control System - DVCS)</span
+                    >: ebben az esetben minden gép eltárol egy teljes adatbázist
+                    az eredetiről (<span class="kiemel">mirror</span>). Ez
+                    tartalmazza a teljes történet (<span class="kiemel"
+                        >history</span
+                    >) az állományokról készült legutolsó pillanatfelvétel
+                    (<span class="kiemel">snapshot</span>) mellett.
+                    <ul>
+                        <li>
+                            Így bármely gépről visszaállítható a teljes
+                            adatbázis.
+                        </li>
+                        <li>
+                            Nagy előnye, hogy egyszerre több különböző
+                            adatbázissal tudunk dolgozni szimultán módon.
+                        </li>
+                    </ul>
+                    <p>
+                        Példák DVSC-re:
+                        <a href="https://git-scm.com/" class="link">Git</a>,
+                        <a href="https://www.mercurial-scm.org/" class="link"
+                            >Mercurial</a
+                        >,
+                        <a href="https://darcs.net/" class="link">Darcs</a>
+                    </p>
+                </li>
+                <img src="./images/kep_05.png" />
+                <img src="./images/kep_06.png" />
+                <h4>Források:</h4>
+                <p>
+                    <a href="https://git-scm.com/"
+                        ><span class="link">git</span></a
+                    >
+                </p>
+                <p>
+                    <a href="https://github.com/"
+                        ><span class="link">github</span></a
+                    >
+                </p>
+            </ol>
+        </div>
+    </body>
+</html>
