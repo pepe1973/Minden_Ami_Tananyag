@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <base target="_blank" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+        <link rel="stylesheet" href="../stilus/stilus.css" />
+        <link
+            rel="shortcut icon"
+            href="../images/logo.png"
+            type="image/x-icon"
+        />
+        <title>Git és GitHub a Git története, alapvető tulajdonságai</title>
+    </head>
+    <body>
+        <a href="#tarto" target="_self">
+            <span class="material-symbols-outlined"> arrow_circle_up </span>
+        </a>
+        <div id="tarto">
+            <h1>
+                <a href="./index.html" target="_self"
+                    >Git és GitHub - A Git története, alapvető tulajdonságai</a
+                >
+            </h1>
+            <ol>
+                <h4>A Git DVCS:</h4>
+                <li>
+                    A Git rövid története:
+                    <ul>
+                        <li>
+                            A Linux tervezőcsapata alkotta meg, mert vitába
+                            keveredtek a BitKeeper nevű DVCS-t fejlesztő,
+                            felügyelő céggel.
+                        </li>
+                        <li>
+                            Linus Torvalds is aktívan részt vett a
+                            megalkotásában.
+                        </li>
+                        <li>2005-től számítjuk a Git történetét.</li>
+                    </ul>
+                </li>
+                <li>
+                    Céljai voltak:
+                    <ul>
+                        <li>gyors</li>
+                        <li>egyszerű dizájn</li>
+                        <li>
+                            nem-lineáris fejlesztések (több ezer párhuzamos ág)
+                            támogatása
+                        </li>
+                        <li>teljesen elosztott</li>
+                        <li>nagy projektek hatékony kezelése</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="kiemel"
+                        >Delta alapú verziókezelés (delta-based version
+                        control)</span
+                    >: ebben az esetben eltároljuk a kiindulási állományokat,
+                    majd csak a rajtuk történt változtatásokat mentjük el a
+                    verziókban. Később ezekből állítható össze az állomány
+                    amivel dolgozni akarunk.
+                </li>
+                <img src="./images/kep_07.png" />
+                <li>
+                    <span class="kiemel"
+                        >Pillanatfelvételek folyama (stream of snapshots)</span
+                    >: ebben az esetben minden verzióban készítünk egy
+                    pillanatfelvételt (<span class="kiemel">snapshot</span>) az
+                    állományokról. Ha egy állomány nem változott, akkor csak egy
+                    hivatkozást a korábbi változatra. Mindenegyes véglegesítés
+                    (<span class="kiemel">commit</span>) után létrejön egy ilyen
+                    kép, amire való hivatkozás mentődik el a
+                    pillanatfelvételben.
+                    <ul>
+                        <li>Ezt az elvet követi a Git.</li>
+                        <li>
+                            A műveletek java a lokális géphez kötött, tehát
+                            nincs szükség hálózati forgalomra. Ezért nagyon
+                            gyorsnak tűnik a használata.
+                        </li>
+                        <li>
+                            Az előzmény történet is a lokális gépen található
+                            adatbázisban van. Ez is könnyebbé és gyorsabbá teszi
+                            a régebbi verziókhoz való hozzáférést.
+                        </li>
+                        <li>
+                            Ha nincs internetkapcsolat, akkor is nyugodtan
+                            tudunk dolgozni, és csak később elég feltölteni a
+                            módosításokat.
+                        </li>
+                    </ul>
+                </li>
+                <img src="./images/kep_08.png" />
+                <li>
+                    <span class="kiemel">Ellenőrző összeg (checksum)</span>: egy
+                    általános informatikai fogalom, a digitális adattárolás
+                    hibátlanságának ellenőrzését segítő módszer.
+                    <a
+                        href="https://hu.wikipedia.org/wiki/Ellen%C5%91rz%C5%91_%C3%B6sszeg"
+                        class="link"
+                        >Wikipedia</a
+                    >
+                    <ul>
+                        <li>
+                            A Gitben az adattárolás előtt minden összeg
+                            ellenőrzésre kerül, kap egy SHA-1 kódolású 40 bites,
+                            hexadecimális számokból felépülő értéket, majd ezzel
+                            a számmal tudunk rá hivatkozni.
+                        </li>
+                        <li>
+                            <ins>Például</ins>:
+                            <code
+                                >24b9da6552252987aa493b52f8696cd6d3b00373</code
+                            >
+                        </li>
+                        <li>
+                            Emiatt szinte lehetetlen adatokat módosítani vagy
+                            törölni, úgy hogy ne tudna róla a Git, ha már
+                            véglegesítve (<span class="kiemel">commit</span>)
+                            lettek.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="kiemel"
+                        >A három állapot (The Three States)</span
+                    >: a Git három állapotban lehet, amelyekben az állományok
+                    elhelyezkedhetnek.
+                    <ul>
+                        <li>
+                            <span class="kiemel">módosított (modified)</span>:
+                            már véglegesített állomány újbóli szerkesztés után a
+                            "munka könyvtárban" (<span class="kiemel"
+                                >Working Directory</span
+                            >). Ez egy másolat (<span class="kiemel"
+                                >checkout</span
+                            >) a gépen a projektről. Állományok az összesűrített
+                            (<span class="kiemel">compressed</span>) lokális
+                            adatbázisból, ami része a
+                            <span class="kiemel"
+                                >.git könyvtárnak (.git directory)</span
+                            >.
+                        </li>
+                        <li>
+                            <span class="kiemel">színpadra rakott (staged)</span
+                            >: a "színpadra" (<span class="kiemel"
+                                >Staging Area</span
+                            >) rakott állományok. Meg lettek jelölve
+                            véglegesítésre, de még nincsenek. Ez általában egy
+                            állomány a véglegesítésre váró változtatásokról a
+                            <span class="kiemel"
+                                >.git könyvtárban (.git directory)</span
+                            >
+                        </li>
+                        <li>
+                            <span class="kiemel">véglegesített (committed)</span
+                            >: lokális adatbázisba helyezett állományok.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="kiemel">.git könyvtár (.git directory)</span>:
+                    egy rejtett mappa, amelyben metaadatokat és az összesűrített
+                    (<span class="kiemel">compressed</span>) lokális adatbázist
+                    tároljuk. Ezt klónozzuk egy másik gépről.
+                </li>
+                <img src="./images/kep_09.png" />
+                <li>
+                    Egy alap Git-es munkafolyam (<span class="kiemel"
+                        >workflow</span
+                    >):
+                    <ul>
+                        <li>Állományok módosítása a munka könyvtárban.</li>
+                        <li>
+                            Szelektíven kiválogatjuk azokat a változtatásokat,
+                            színpadra tesszük, amelyeket véglegesíteni
+                            szeretnénk.
+                        </li>
+                        <li>Véglegesítés.</li>
+                    </ul>
+                </li>
+                <h4>Források:</h4>
+                <p>
+                    <a href="https://git-scm.com/"
+                        ><span class="link">git</span></a
+                    >
+                </p>
+                <p>
+                    <a href="https://github.com/"
+                        ><span class="link">github</span></a
+                    >
+                </p>
+            </ol>
+        </div>
+    </body>
+</html>
