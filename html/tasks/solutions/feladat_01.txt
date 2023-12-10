@@ -1,7 +1,0 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Cím</title>
-    </head>
-    <body></body>
-</html>
