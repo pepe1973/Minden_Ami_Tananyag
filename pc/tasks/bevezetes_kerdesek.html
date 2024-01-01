@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <base target="_blank" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+        <link
+            rel="stylesheet"
+            href="../../stilus/stilus.css"
+        />
+        <style>
+            li li {
+                border: none;
+                color: red;
+            }
+
+            .rejt {
+                display: none;
+            }
+
+            img {
+                display: block;
+                margin: 1em 0px;
+                width: 300px;
+            }
+        </style>
+        <link
+            rel="shortcut icon"
+            href="../../images/logo.png"
+            type="image/x-icon"
+        />
+        <title>HTML bevezetés-kérdések</title>
+    </head>
+    <body>
+        <a
+            href="#tarto"
+            target="_self"
+        >
+            <span class="material-symbols-outlined"> arrow_circle_up </span>
+        </a>
+        <div id="tarto">
+            <h1>
+                <a
+                    href="../bevezetes.html"
+                    target="_self"
+                    >HTML - Bevezetés - Kérdések</a
+                >
+            </h1>
+            <ol>
+                <h4>Kérdések:</h4>
+                <li>
+                    A firmware az hardware, software vagy egyik sem?
+                    <img
+                        src="../images/computer.png"
+                        alt="kép"
+                    />
+                    <ol>
+                        <li>Hardware</li>
+                        <li>Software</li>
+                        <li>Egyik sem</li>
+                    </ol>
+                    <div class="megoldas">Software</div>
+                    <button
+                        onclick="megmutat(event)"
+                        class="mutat"
+                    >
+                        Megoldás
+                    </button>
+                    <button
+                        onclick="elrejt(event)"
+                        class="rejt"
+                    >
+                        Elrejt
+                    </button>
+                </li>
+                <li>
+                    A firmware az hardware, software vagy egyik sem?
+                    <img
+                        src="../images/computer.png"
+                        alt="kép"
+                    />
+                    <ol>
+                        <li>Hardware</li>
+                        <li>Software</li>
+                        <li>Egyik sem</li>
+                    </ol>
+                    <div class="megoldas">Software</div>
+                    <button
+                        onclick="megmutat(event)"
+                        class="mutat"
+                    >
+                        Megoldás
+                    </button>
+                    <button
+                        onclick="elrejt(event)"
+                        class="rejt"
+                    >
+                        Elrejt
+                    </button>
+                </li>
+            </ol>
+        </div>
+        <script>
+            let megoldasok = document.getElementsByClassName('megoldas');
+            let megoldasokTomb = Array.from(megoldasok);
+            let mutat = document.getElementsByClassName('mutat');
+            let mutatTomb = Array.from(mutat);
+            let rejt = document.getElementsByClassName('rejt');
+            let rejtTomb = Array.from(rejt);
+            let gombok = document.getElementsByTagName('button');
+            let gombokTomb = Array.from(gombok);
+
+            function megmutat(e) {
+                let index = +gombokTomb.indexOf(e.target);
+                for (let i = 0; i < megoldasok.length; i++) {
+                    if (index / 2 === i) {
+                        megoldasok[i].style.display = 'block';
+                        mutat[i].style.display = 'none';
+                        rejt[i].style.display = 'block';
+                    }
+                }
+            }
+
+            function elrejt(e) {
+                let index = +gombokTomb.indexOf(e.target) - 1;
+                for (let i = 0; i < megoldasok.length; i++) {
+                    if (index / 2 === i) {
+                        megoldasok[i].style.display = 'none';
+                        mutat[i].style.display = 'block';
+                        rejt[i].style.display = 'none';
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

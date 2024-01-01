@@ -59,12 +59,38 @@ h4 {
     padding: 0.5em;
 }
 
+.feladat_keret {
+    color: white;
+    background-color: black;
+}
+
+.feladat_cim {
+    color: dodgerblue;
+}
+
 .feladat_kerdes {
     color: tomato;
 }
 
 .feladat_megoldas {
     color: forestgreen;
+}
+
+.mego {
+    display: flex;
+}
+
+.mego a {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.csharp {
+    color: tomato;
+}
+
+.python {
+    color: mediumseagreen;
 }
 
 ol li {
@@ -104,6 +130,15 @@ th,
 td {
     border: 1px solid blue;
     padding: 2px;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    margin: 1em;
+}
+
+.kiertekel {
+    padding-bottom: 1em;
 }
 
 @media screen and (max-width: 1200px) {

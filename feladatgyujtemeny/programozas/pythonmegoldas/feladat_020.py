@@ -1,0 +1,33 @@
+from turtle import *
+
+def teglalap():
+	begin_fill()
+	forward(130)
+	left(90)
+	forward(300)
+	left(90)
+	forward(130)
+	left(90)
+	forward(300)
+	end_fill()
+
+reset()
+color("black")
+fillcolor("green")
+teglalap()
+up()
+left(90)
+forward(130)
+down()
+color("black")
+fillcolor("white")
+teglalap()
+up()
+left(90)
+forward(130)
+down()
+color("black")
+fillcolor("orange")
+teglalap()
+
+done()
